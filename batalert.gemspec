@@ -1,4 +1,4 @@
-require './lib/batalert/version'
+require_relative 'lib/batalert/version'
 require 'rake/file_list'
 
 Gem::Specification.new do |spec|
@@ -16,4 +16,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
+  spec.add_dependency               'espeak-ruby'
+  spec.add_dependency               'libnotify'
+  spec.add_development_dependency   'minitest'
 end
