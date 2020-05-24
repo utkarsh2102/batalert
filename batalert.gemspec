@@ -1,10 +1,10 @@
-require 'lib/batalert/version'
+require './lib/batalert/version'
 require 'rake/file_list'
 
 Gem::Specification.new do |spec|
   spec.name          = "batalert"
   spec.version       = Batalert::VERSION
-  spec.platfor       = Gem::Platform::RUBY
+  spec.platform      = Gem::Platform::RUBY
   spec.authors       = ["Utkarsh Gupta"]
   spec.email         = ["utkarsh@debian.org"]
   spec.license       = "MIT"
