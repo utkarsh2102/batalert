@@ -11,8 +11,9 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{Battery notifications/alerts}
   spec.description   = %q{Battery notifications/alerts so your battery never dies! 💯}
   spec.homepage      = "https://github.com/utkarsh2102/batalert"
-  spec.files         = Rake::FileList['**/*'].exclude(*File.read('.gitignore').split)
-  spec.executables   = Dir.glob("bin/*").map{ |f| File.basename(f) }
+  spec.files         = Dir["exe/*", "lib/**/*", "LICENSE"]
+  spec.executables   = Dir.glob("exe/*").map{ |f| File.basename(f) }
+  spec.bindir        = "exe"
   spec.require_paths = ["lib"]
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 

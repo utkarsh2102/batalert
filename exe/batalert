@@ -1,0 +1,4 @@
+#! /usr/bin/env ruby
+
+require "batalert"
+Batalert::Runner.new.main
