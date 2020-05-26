@@ -19,5 +19,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency               'espeak-ruby'
   spec.add_dependency               'libnotify'
+  spec.add_dependency               'whenever'
   spec.add_development_dependency   'minitest'
 end
