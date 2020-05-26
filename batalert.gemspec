@@ -1,5 +1,4 @@
-require_relative 'lib/batalert/version'
-require 'rake/file_list'
+require 'batalert/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "batalert"
