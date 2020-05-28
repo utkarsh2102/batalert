@@ -1,34 +1,51 @@
-# Batalert
+# batalert
 
-batalert aka *Battery Alert* is a ruby gem that is written to notify the user about the current battery status so that they never run out of charging.
+`batalert` (aka *Battery Alert*) is a tool, written in Ruby, to notify the users when their battery is either under-charged (default: < 10%) or over-charged (default: > 90%).
 
-With this library, the user neither has to worry about leaving the device on charge nor while they are working.
+> notify the users when their battery is either under-charged (default: < 10%) or over-charged (default: > 90%).
 
-The gem will notify you to **Put-On Charging** when the battery is low and **Remove Charging** when the system is done charging. It points to the battery level in the notification as well.
-## Installation
+Ever ran out of battery whilst in the middle of work?  
+Well, say no more! `batalert` has got you covered!  
+Just consider installing it and put this on cron so that you never have to worry about running out of battery in midst of your work! Isn't that...amazing? 🚀
 
-#### Setup for [batalert](https://github.com/utkarsh2102/batalert)
+This is originally intended for [WM](https://en.wikipedia.org/wiki/Window_manager) users who don't have get battery notifications by default, but can be used by everyone who sees its worth!
 
-```ruby
-# Install the gem via
-$ gem install batalert
+How it works is that this tool, upon being set up, shall notify you when to put your battery on charging and when to unplug it, too. Whilst notifying so, it also numerically mentions your battery percentage at that particular moment.
 
-# Install via apt (it's in the NEW queue)
-$ sudo apt install ruby-batalert
+## Setting up `batalert`
 
-```
-#### Ways of setting up cron
+#### Ways of installation:
 
-```bash
-# Either do it Manually
-$ crontab -e
-# add following into the editor
-*/15 * * * * </>
+- Install the [gem](https://rubygems.org/gems/batalert) from the [rubygems](https://rubygems.org/) archive:  
+  `$ gem install batalert`
 
-# Or, use whenever in the parent directory, it will set up cron automatically to run in every 15 minutes
-$ cd batalert
-$ whenever --update-crontab
-```
+- Install the [package](https://tracker.debian.org/pkg/batalert) via apt (only for Sid and Bullseye):  
+  `$ apt install batalert`
+
+- Download the deb and install it manually:  
+  The [release page](https://github.com/utkarsh2102/batalert/releases) has a .deb binary which can be downloaded with a single click. Once done, run:  
+  `$ dpkg -i <path-to-deb>/batalert_<version>_all.deb`
+
+#### Ways of setting it as a cron job:
+
+- Set it up manually:  
+  `$ crontab -e`
+
+  And then add the following line at the end:  
+  `*/n * * * * /usr/bin/batalert`
+
+  **NOTE**: `n` is the duration of interval (in minutes) after which the binary is executed. So, for instance, if you want to schedule a cron after every 15 minutes (that's what I do), then the line becomes:  
+  `*/15 * * * * /usr/bin/batalert`
+
+- Use [whenever](https://www.rubyguides.com/2019/04/ruby-whenever-gem/) to schedule the cron automatically on your behalf:  
+(you can install `whenever` via `gem install whenever` or `apt install ruby-whenever`)  
+   - Clone this repository:  
+     `$ git clone https://github.com/utkarsh2102/batalert.git`  
+    - Move to its parent directory:  
+      `$ cd batalert`  
+    - Set the value of interval in `config/schedule.rb`.
+    - Run `whenever` to schedule the cron:  
+      `$ whenever --update-crontab`
 
 ## Development
 
@@ -41,12 +58,9 @@ To release a new version, update the version number in `version.rb`, and then ru
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/utkarsh2102/batalert.  
+As always, bug reports and pull requests are heartily welcomed! 💖  
 This project is intended to be a safe and welcoming space for collaboration.
 
 ## License
-The script is licensed under [MIT](https://github.com/utkarsh2102/batalert/blob/master/LICENSE) section.
-
-
-##
+`batalert` is available as open-source under the [MIT](https://github.com/utkarsh2102/batalert/blob/master/LICENSE) license.  
 Copyright © 2020 Utkarsh Gupta

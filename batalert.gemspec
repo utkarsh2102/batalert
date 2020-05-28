@@ -9,8 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Utkarsh Gupta"]
   spec.email         = ["utkarsh@debian.org"]
   spec.license       = "MIT"
-  spec.summary       = %q{Battery notifications/alerts}
-  spec.description   = %q{Battery notifications/alerts so your battery never dies! 💯}
+  spec.summary       = %q{Battery notifications/alerts for your favorite WM! 💯}
   spec.homepage      = "https://github.com/utkarsh2102/batalert"
   spec.files         = Dir["exe/*", "lib/**/*", "LICENSE"]
   spec.executables   = Dir.glob("exe/*").map{ |f| File.basename(f) }
