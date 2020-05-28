@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
   spec.summary       = %q{Battery notifications/alerts for your favorite WM! 💯}
   spec.homepage      = "https://github.com/utkarsh2102/batalert"
-  spec.files         = Dir["config/*", "exe/*", "lib/**/*", "LICENSE"]
+  spec.files         = Dir["config/*", "exe/*", "lib/**/*", "LICENSE", "README.md"]
   spec.executables   = Dir.glob("exe/*").map{ |f| File.basename(f) }
   spec.bindir        = "exe"
   spec.require_paths = ["lib"]

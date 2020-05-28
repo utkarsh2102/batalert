@@ -4,3 +4,6 @@
 /pkg/
 /test/reports/
 /tmp/
+/vendor/*
+/*.gem
+Gemfile.lock
