@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # env :PATH, ENV['PATH']
 # env :GEM_PATH, ENV['GEM_PATH']
 
@@ -21,5 +23,5 @@
 # end
 
 every 15.minute do
-  command "/usr/local/bin/batalert"
+  command '/usr/local/bin/batalert'
 end
