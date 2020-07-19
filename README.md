@@ -19,14 +19,14 @@ Batlalert upon being set up, shall notify you when to put your battery on chargi
 #### Ways of installation:  
 
 - Install the [gem](https://rubygems.org/gems/batalert) from the [rubygems](https://rubygems.org/) archive:  
-  `$gem install batalert`  
+  `$ gem install batalert`  
 
 - Install the [package](https://tracker.debian.org/pkg/batalert) via apt (only for Debian Sid and Bullseye):   
-  `$sudo apt install batalert`
+  `$ sudo apt install batalert`
 
 - Download the deb and install it manually:  
   The [release page](https://github.com/utkarsh2102/batalert/releases) has a .deb binary which can be downloaded with a single click. Once done, run:  
- `$sudo dpkg -i <path-to-deb>/batalert_<version>_all.deb`
+ `$ sudo dpkg -i <path-to-deb>/batalert_<version>_all.deb`
 
 #### Ways of setting it as a cron job:
 
@@ -64,6 +64,5 @@ As always, bug reports and pull requests are heartily welcomed! 💖
 Batalert project is a safe and welcoming space for collaboration.
 
 ## License
-`batalert` is available as a Free Software under the the [MIT](https://github.com/utkarsh2102/batalert/blob/master/LICENSE) license.  
+`batalert` is available as a Free Software under the [MIT](https://github.com/utkarsh2102/batalert/blob/master/LICENSE) license.  
 Copyright © 2020 Utkarsh Gupta
-
