@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency               'espeak-ruby'
   spec.add_dependency               'libnotify'
+  spec.add_dependency               'volumerb'
   spec.add_development_dependency   'minitest'
   spec.add_development_dependency   'rake'
   spec.add_development_dependency   'rubocop'
