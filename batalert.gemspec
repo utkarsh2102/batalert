@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.executables   = Dir.glob('exe/*').map { |f| File.basename(f) }
   spec.bindir        = 'exe'
   spec.require_paths = ['lib']
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 2.6.0')
 
   spec.add_dependency               'espeak-ruby', '~> 1.1.0'
   spec.add_dependency               'libnotify'
