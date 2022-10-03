@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
 
-  spec.add_dependency               'espeak-ruby'
+  spec.add_dependency               'espeak-ruby', '~> 1.1.0'
   spec.add_dependency               'libnotify'
   spec.add_dependency               'volumerb'
   spec.add_development_dependency   'minitest'
