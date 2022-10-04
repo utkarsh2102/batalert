@@ -2,6 +2,7 @@ require: rubocop-packaging
 
 AllCops:
   NewCops: enable
+  SuggestExtensions: false
   Exclude:
     - '.bundle/**/*'
     - 'spec/fixtures/**/*'
@@ -12,7 +13,7 @@ AllCops:
 Metrics/BlockLength:
   Exclude:
     - tasks/*.rake
-  ExcludedMethods:
+  AllowedMethods:
     - configure
     - describe
     - context
