@@ -27,4 +27,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency   'rubocop'
   spec.add_development_dependency   'rubocop-packaging'
   spec.add_development_dependency   'whenever'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end
