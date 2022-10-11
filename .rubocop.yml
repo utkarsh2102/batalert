@@ -2,17 +2,18 @@ require: rubocop-packaging
 
 AllCops:
   NewCops: enable
+  SuggestExtensions: false
   Exclude:
     - '.bundle/**/*'
     - 'spec/fixtures/**/*'
     - 'tmp/**/*'
     - 'vendor/**/*'
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.6
 
 Metrics/BlockLength:
   Exclude:
     - tasks/*.rake
-  ExcludedMethods:
+  AllowedMethods:
     - configure
     - describe
     - context
